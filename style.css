@@ -716,6 +716,7 @@ header.scrolled {
     font-weight: 400;
 
     margin: 10px 0;
+   color: #111;
 
 }
 
@@ -723,7 +724,7 @@ header.scrolled {
 .gallery-header p {
 
     color:
-       #8a6535;;
+      var(--gray)
 
 }
 
@@ -765,7 +766,7 @@ header.scrolled {
 .back-button:hover {
 
     background:
-        #8a6535;;
+        var(--gold);
 
     color:
         #111;
