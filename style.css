@@ -310,10 +310,10 @@ header.scrolled {
     padding: 15px 30px;
 
     border:
-        1px solid var(--gold);
+        1px solid ;
 
     color:
-        var(--gold);
+        #8a6535;;
 
     font-size: 11px;
 
@@ -601,7 +601,7 @@ header.scrolled {
 .category-overlay p {
 
     color:
-        var(--gold);
+        #8a6535;
 
     font-size: 10px;
 
@@ -696,7 +696,7 @@ header.scrolled {
 .gallery-header span {
 
     color:
-        var(--gold);
+        #8a6535;;
 
     font-size: 11px;
 
@@ -723,7 +723,7 @@ header.scrolled {
 .gallery-header p {
 
     color:
-        var(--gray);
+       #8a6535;;
 
 }
 
@@ -741,10 +741,10 @@ header.scrolled {
         transparent;
 
     border:
-        1px solid var(--gold);
+        1px solid;
 
     color:
-        var(--gold);
+         #8a6535;;
 
     cursor:
         pointer;
@@ -765,7 +765,7 @@ header.scrolled {
 .back-button:hover {
 
     background:
-        var(--gold);
+        #8a6535;;
 
     color:
         #111;
@@ -1233,7 +1233,7 @@ header.scrolled {
 .contact-box span {
 
     color:
-        var(--gold);
+         #8a6535;;
 
     letter-spacing:
         3px;
