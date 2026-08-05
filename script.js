@@ -361,55 +361,39 @@ function showLightboxItem() {
     /* =================================================
        SHOW VIDEO
     ================================================= */
+if (video) {
 
-    if (video) {
+    const newVideo =
+        document.createElement("video");
 
+    newVideo.src =
+        video.src;
 
-        const newVideo =
-            document.createElement(
-                "video"
-            );
+    newVideo.controls = true;
 
+    newVideo.autoplay = true;
 
-        newVideo.src =
-            video.src;
+    newVideo.playsInline = true;
 
+    newVideo.preload = "metadata";
 
-        newVideo.controls =
-            true;
+    /* Keep original aspect ratio */
 
+    newVideo.style.maxWidth = "90vw";
+    newVideo.style.maxHeight = "90vh";
+    newVideo.style.width = "auto";
+    newVideo.style.height = "auto";
+    newVideo.style.objectFit = "contain";
 
-        newVideo.autoplay =
-            true;
+    content.appendChild(newVideo);
 
+    newVideo.play().catch(function () {
 
-        newVideo.playsInline =
-            true;
+        console.log("Video autoplay blocked.");
 
+    });
 
-        newVideo.preload =
-            "metadata";
-
-
-        content.appendChild(
-            newVideo
-        );
-
-
-        /* Try autoplay */
-
-        newVideo.play()
-            .catch(
-                function () {
-
-                    console.log(
-                        "Video autoplay blocked."
-                    );
-
-                }
-            );
-
-    }
+}
 
 
     /* Open lightbox */
