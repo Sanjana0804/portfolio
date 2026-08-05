@@ -602,3 +602,40 @@ document.addEventListener(
 
     }
 );
+/* =====================================================
+   AUTO VIDEO THUMBNAIL
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const videos = document.querySelectorAll(".gallery-video");
+
+    videos.forEach(function (video) {
+
+        video.addEventListener("loadeddata", function () {
+
+            video.currentTime = 1;
+
+        });
+
+        video.addEventListener("seeked", function () {
+
+            const canvas = document.createElement("canvas");
+
+            canvas.width = video.videoWidth;
+
+            canvas.height = video.videoHeight;
+
+            const ctx = canvas.getContext("2d");
+
+            ctx.drawImage(video, 0, 0);
+
+            const thumbnail = canvas.toDataURL("image/jpeg");
+
+            video.setAttribute("poster", thumbnail);
+
+        });
+
+    });
+
+});
