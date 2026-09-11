@@ -1,0 +1,2890 @@
+/* =========================================================
+   PREMIUM CINEMATIC PORTFOLIO
+   LIGHT GRAY • CHARCOAL • WARM GOLD
+   Elegant / Minimal / Luxury / Editorial
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+   Add these inside HTML <head>
+========================================================= */
+
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+*/
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* =========================================================
+   ROOT — PREMIUM GRAY COLOR SYSTEM
+========================================================= */
+
+:root {
+
+    /* ---------- BACKGROUNDS ---------- */
+
+    --background: #e5e3df;
+    --background-soft: #d9d7d2;
+    --background-deep: #ceccc7;
+
+    /* ---------- CARDS / SURFACES ---------- */
+
+    --card: #eeece8;
+    --card-dark: #292827;
+    --surface: #dedcd7;
+    --surface-light: #f2f0ec;
+
+    /* ---------- MAIN TEXT ---------- */
+
+    --text: #202020;
+    --text-dark: #151515;
+    --text-light: #555452;
+
+    /* ---------- SECONDARY TEXT ---------- */
+
+    --gray: #777571;
+    --gray-light: #96938d;
+    --gray-dark: #484744;
+
+    /* ---------- LUXURY ACCENT ---------- */
+
+    --gold: #a9824c;
+    --gold-light: #c6a66f;
+    --gold-dark: #806237;
+
+    /* ---------- WHITE ---------- */
+
+    --white: #ffffff;
+    --white-soft: #f4f2ed;
+
+    /* ---------- BORDERS ---------- */
+
+    --border: rgba(30, 30, 28, 0.12);
+    --border-dark: rgba(255, 255, 255, 0.12);
+    --border-gold: rgba(169, 130, 76, 0.35);
+
+    /* ---------- SHADOWS ---------- */
+
+    --shadow:
+        0 20px 60px rgba(30, 29, 27, 0.10);
+
+    --shadow-soft:
+        0 10px 35px rgba(30, 29, 27, 0.07);
+
+    --shadow-hover:
+        0 30px 80px rgba(30, 29, 27, 0.18);
+
+    /* ---------- TRANSITIONS ---------- */
+
+    --ease:
+        cubic-bezier(.2, .8, .2, 1);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+    transition: all 0.45s var(--ease);
+}
+
+
+/* =========================================================
+   SCROLLED NAVBAR
+========================================================= */
+
+header.scrolled {
+    background: rgba(229, 227, 223, 0.88);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 35px rgba(30, 29, 27, 0.07);
+}
+
+
+/* =========================================================
+   NAVBAR CONTENT
+========================================================= */
+
+.navbar {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    font-family: "DM Serif Display", serif;
+    font-size: 29px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
+    transition: all 0.35s ease;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo:hover {
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   NAV UNDERLINE
+========================================================= */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: translateX(-50%);
+    transition: width 0.35s var(--ease);
+}
+
+.nav-links a:hover {
+    color: var(--gold-dark);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CLOSE MENU
+========================================================= */
+
+.close-menu {
+    display: none;
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--background);
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            115deg,
+            #eeece8 0%,
+            #e3e1dc 45%,
+            #d3d1cc 100%
+        );
+}
+
+
+/* =========================================================
+   HERO LARGE CIRCLE
+========================================================= */
+
+.hero-background::before {
+    content: "";
+    position: absolute;
+    width: 720px;
+    height: 720px;
+    right: -300px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(169, 130, 76, 0.20);
+}
+
+
+/* =========================================================
+   HERO INNER CIRCLE
+========================================================= */
+
+.hero-background::after {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    right: -175px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(169, 130, 76, 0.12);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 75px;
+    animation: heroReveal 1.1s var(--ease) forwards;
+}
+
+@keyframes heroReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.hero-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero h1 {
+    max-width: 900px;
+    margin: 22px 0 28px;
+    color: var(--text-dark);
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(58px, 9vw, 118px);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -4px;
+}
+
+.hero h1 em {
+    color: var(--gold-dark);
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+========================================================= */
+
+.hero p {
+    max-width: 510px;
+    margin-bottom: 35px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   PREMIUM BUTTON
+========================================================= */
+
+.main-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    overflow: hidden;
+    border: 1px solid var(--gold-dark);
+    background: transparent;
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s var(--ease);
+    isolation: isolate;
+}
+
+.main-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gold-dark);
+    transform: translateX(-101%);
+    transition: transform 0.4s var(--ease);
+    z-index: -1;
+}
+
+.main-button:hover {
+    color: var(--white);
+    transform: translateY(-4px);
+    box-shadow:
+        0 15px 35px rgba(128, 98, 55, 0.20);
+}
+
+.main-button:hover::before {
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   SCROLL TEXT
+========================================================= */
+
+.scroll-text {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+    padding: 125px 0;
+}
+
+
+/* =========================================================
+   ALTERNATING SECTION BACKGROUND
+========================================================= */
+
+#about {
+    background: var(--background-soft);
+}
+
+#portfolio {
+    background: var(--background);
+}
+
+#services {
+    background: var(--background-soft);
+}
+
+#contact {
+    background: var(--background);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.section-heading span,
+.section-label {
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 15px 0;
+    color: var(--text-dark);
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(46px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ABOUT GRID
+========================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   ABOUT IMAGE INNER BORDER
+========================================================= */
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE LIGHT
+========================================================= */
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.16),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s var(--ease);
+}
+
+.about-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content h2 {
+    margin: 15px 0 30px;
+    color: var(--text-dark);
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.about-content h2 em {
+    color: var(--gold-dark);
+    font-style: italic;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #292827;
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.5s var(--ease),
+        box-shadow 0.5s var(--ease);
+}
+
+
+/* =========================================================
+   CATEGORY BORDER
+========================================================= */
+
+.category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CATEGORY IMAGE
+========================================================= */
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s var(--ease);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   GOOGLE DRIVE CARD
+========================================================= */
+
+.drive-card {
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.drive-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.drive-card i {
+    color: var(--gold-dark);
+    font-size: 92px;
+
+    transition:
+        all 0.4s var(--ease);
+}
+
+.drive-card span {
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.drive-card:hover i {
+    transform:
+        translateY(-10px)
+        scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 12px 18px rgba(128, 98, 55, 0.20)
+        );
+}
+
+
+/* =========================================================
+   CATEGORY OVERLAY
+========================================================= */
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 14, 13, 0.92),
+            rgba(15, 14, 13, 0.38),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CATEGORY NUMBER
+========================================================= */
+
+.category-number {
+    color: #d5bd91;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-overlay h3 {
+    margin: 10px 0;
+
+    color: var(--white);
+
+    font-family: "DM Serif Display", serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CATEGORY DESCRIPTION
+========================================================= */
+
+.category-overlay p {
+    color: #d7c19a;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: letter-spacing 0.4s ease;
+}
+
+.category-card:hover .category-overlay p {
+    letter-spacing: 4px;
+}
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+
+    display: none;
+
+    margin-top:
+        80px;
+}
+
+
+.gallery-section.active {
+
+    display: block;
+
+    animation:
+        galleryAnimation
+        0.6s ease;
+}
+
+
+@keyframes galleryAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   GALLERY HEADER
+===================================================== */
+
+.gallery-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-end;
+
+    gap:
+        30px;
+
+    padding-bottom:
+        30px;
+
+    margin-bottom:
+        40px;
+        margin-right: 6%;
+        margin-left: 6%;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.gallery-header span {
+
+    color:
+        var(--rich-brown);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.gallery-header h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        60px;
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    margin:
+        10px 0;
+
+    color:
+        var(--text);
+}
+
+
+.gallery-header p {
+
+    color:
+        var(--gray);
+}
+
+
+
+
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+    position: relative;
+
+    padding: 14px 24px;
+     margin-right: 15px; 
+
+    border: 1px solid var(--gold-dark);
+    background: transparent;
+    color: var(--gold-dark);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: all 0.4s var(--ease);
+
+    isolation: isolate;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: var(--gold-dark);
+
+    transform: translateX(-101%);
+
+    transition:
+        transform 0.4s var(--ease);
+
+    z-index: -1;
+}
+
+.back-button:hover {
+    color: var(--white);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(128, 98, 55, 0.16);
+}
+
+.back-button:hover::before {
+    transform: translateX(0);
+}
+/* =====================================================
+   GALLERY GRID
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================================
+   GALLERY ITEM
+===================================================== */
+
+.gallery-item {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        420px;
+
+    overflow:
+        hidden;
+
+    cursor:
+        pointer;
+
+    background:
+        #ddd;
+}
+
+
+.gallery-item img,
+.gallery-item video {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-item {
+
+    position:
+        relative;
+}
+
+
+.video-icon {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border:
+        1px solid
+        rgba(107,66,38,0.4);
+
+    color:
+        var(--rich-brown);
+
+    font-size:
+        21px;
+
+    z-index:
+        5;
+
+    pointer-events:
+        none;
+
+    transition:
+        0.35s ease;
+}
+
+
+.video-item:hover
+.video-icon {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.12);
+
+    background:
+        var(--rich-brown);
+
+    color:
+        #ffffff;
+}
+
+
+/* =====================================================
+   GALLERY SECTION
+===================================================== */
+
+.gallery-section {
+    padding: 100px 6%;
+    background: #ccd0cf;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    display: block;
+    color: #8a6535;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    color: #1a1d1d;
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    margin: 0 0 15px;
+}
+
+.section-header p {
+    color: #4f5757;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+
+
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(0, 0, 0, 0.92);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 90vw;
+    max-height: 85vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   LIGHTBOX CLOSE
+===================================================== */
+
+.lightbox-close {
+    position: fixed;
+
+    top: 25px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.5);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 0, 0, 0.5);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+    transition:
+        all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .gallery-grid,
+    .photo-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .gallery-item,
+    .photo-item {
+        height: 360px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding:
+            70px 5%;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+        font-size: 38px;
+    }
+
+    .gallery-grid,
+    .photo-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+    .gallery-item,
+    .photo-item {
+        height: 400px;
+    }
+
+    .gallery-overlay {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 27px;
+    }
+
+    .category-gallery {
+        margin-top: 50px;
+    }
+
+    .category-header h2 {
+        font-size: 35px;
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-content img,
+    .lightbox-content video {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+}
+
+/* =====================================================
+   VIDEO
+===================================================== 
+
+.video-item {
+
+    position:
+        relative;
+
+}
+
+
+.video-icon {
+
+    position:
+        absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    color:
+        #ffffff;
+
+    font-size: 22px;
+
+    padding-left: 4px;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+
+}
+
+
+.video-item:hover
+.video-icon {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.15);
+
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+}
+
+
+.video-item::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.08);
+
+    pointer-events:
+        none;
+
+    transition:
+        background 0.4s ease;
+
+}
+
+
+.video-item:hover::after {
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+}*/
+
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 450px;
+
+    padding: 45px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.5s var(--ease),
+        box-shadow 0.5s var(--ease),
+        border-color 0.5s ease;
+}
+
+
+/* =========================================================
+   SERVICE BACKGROUND IMAGES
+========================================================= */
+
+.wedding-service {
+    background-image:
+        url("image/wedding-cover.jpg");
+}
+
+.fashion-service {
+    background-image:
+        url("image/fashion-cover.jpg");
+}
+
+.commercial-service {
+    background-image:
+        url("image/commercial-cover.jpg");
+}
+
+
+
+/* =========================================================
+   SERVICE IMAGE ZOOM
+========================================================= */
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1);
+
+    transition:
+        transform 0.8s var(--ease);
+}
+
+
+/* =========================================================
+   SERVICE DARK OVERLAY
+========================================================= */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(18, 17, 16, 0.94),
+            rgba(18, 17, 16, 0.52),
+            rgba(18, 17, 16, 0.08)
+        );
+
+    transition:
+        background 0.5s ease;
+}
+
+.service-card:hover::before {
+    background:
+        linear-gradient(
+            to top,
+            rgba(92, 70, 40, 0.92),
+            rgba(18, 17, 16, 0.45),
+            rgba(18, 17, 16, 0.06)
+        );
+}
+
+.service-card:hover::after {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
+
+.service-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SERVICE HOVER
+========================================================= */
+
+.service-card:hover {
+    transform: translateY(-10px);
+
+    border-color:
+        var(--border-gold);
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+
+/* =========================================================
+   SERVICE NUMBER
+========================================================= */
+
+.service-number {
+    color: #d7bd8d;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.service-card h3 {
+    margin: 20px 0 15px;
+
+    color: var(--white);
+
+    font-family:
+        "DM Serif Display",
+        serif;
+
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   SERVICE DESCRIPTION
+========================================================= */
+
+.service-card p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 85px 70px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8d5cf,
+            #e5e2dc
+        );
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* =========================================================
+   CONTACT DECORATION
+========================================================= */
+
+.contact-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 460px;
+    height: 460px;
+
+    top: -250px;
+    right: -120px;
+
+    border:
+        1px solid rgba(169, 130, 76, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.contact-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -170px;
+    left: -100px;
+
+    border:
+        1px solid rgba(169, 130, 76, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.contact-intro {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+.contact-intro span {
+    display: block;
+
+    color:
+        var(--gold-dark);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contact-intro h2 {
+    margin: 20px 0;
+
+    color: var(--text-dark);
+
+    font-family:
+        "DM Serif Display",
+        serif;
+
+    font-size:
+        clamp(46px, 7vw, 80px);
+
+    font-weight: 400;
+    line-height: 1;
+}
+
+.contact-intro p {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INQUIRY FORM
+========================================================= */
+
+.inquiry-form {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 28px 35px;
+
+    padding: 40px;
+
+    background:
+        rgba(245, 243, 238, 0.55);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border:
+        1px solid rgba(70, 60, 50, 0.12);
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.form-group label {
+    margin-bottom: 10px;
+
+    color: var(--gold-dark);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FORM INPUT
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 0;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(80, 70, 60, 0.22);
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text-dark);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition:
+        all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #88837b;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    padding-left: 6px;
+
+    border-bottom-color:
+        var(--gold-dark);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #e2dfd8;
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   FORM SUBMIT
+========================================================= */
+
+.form-submit {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.form-submit .main-button {
+    cursor: pointer;
+}
+
+.form-submit .main-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 45px 0;
+
+    background: #d4d2cd;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-content .logo {
+    color: var(--text-dark);
+
+    font-family:
+        "DM Serif Display",
+        serif;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.footer-content .logo span {
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
+
+.footer-content p {
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--text);
+
+    font-size: 13px;
+
+    transition:
+        all 0.3s var(--ease);
+}
+
+.social-links a:hover {
+    color: var(--gold-dark);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(28, 27, 25, 0.97);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.lightbox.active {
+    display: flex;
+
+    animation:
+        lightboxFade 0.35s ease;
+}
+
+@keyframes lightboxFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   LIGHTBOX CONTENT
+========================================================= */
+
+#lightboxContent {
+    width: auto;
+    max-width: 90vw;
+    max-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#lightboxContent img,
+#lightboxContent video {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 90vw;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   LIGHTBOX CLOSE
+========================================================= */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 18px;
+    right: 30px;
+
+    z-index: 10001;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--gold-light);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   LIGHTBOX ARROWS
+========================================================= */
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 10001;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        translateY(-50%);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: var(--white);
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s var(--ease);
+}
+
+.lightbox-prev {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+
+    background:
+        rgba(169, 130, 76, 0.18);
+
+    border-color:
+        var(--gold-light);
+
+    color:
+        var(--gold-light);
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+
+/* =========================================================
+   =========================================================
+   GALLERY FOCUS MODE
+   =========================================================
+   When a category is clicked:
+   - Hero disappears
+   - About disappears
+   - Portfolio disappears
+   - Services disappear
+   - Contact disappears
+   - Footer disappears
+   - Navbar disappears
+   - Only selected gallery remains
+   =========================================================
+========================================================= */
+/* =========================================================
+   GALLERY FOCUS MODE
+========================================================= */
+
+body.gallery-mode {
+    overflow-x: hidden;
+    background: var(--background);
+}
+
+/* Hide complete main portfolio */
+body.gallery-mode #mainPortfolio {
+    display: none !important;
+}
+
+/* Hide all galleries */
+body.gallery-mode .gallery-section {
+    display: none !important;
+}
+
+/* Show only active gallery */
+body.gallery-mode .gallery-section.active {
+    display: block !important;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 60px 0 80px;
+    background: var(--background);
+    animation: galleryAnimation 0.7s var(--ease);
+}
+
+/* Gallery container */
+body.gallery-mode .gallery-section.active .container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+/* Gallery header */
+body.gallery-mode .gallery-section.active .gallery-header {
+    margin-top: 0;
+}
+
+/* Back button */
+body.gallery-mode .back-button {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   GALLERY MODE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body.gallery-mode .gallery-section.active {
+        padding-top: 35px;
+        padding-bottom: 50px;
+        min-height: 100vh;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .about-image {
+        height: 520px;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .haldi-service {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+    /* =========================================================
+   LOCK WEBSITE SCROLL WHEN MENU IS OPEN
+========================================================= */
+
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+    .menu-btn {
+        position: relative;
+
+        z-index: 1001;
+
+        display: block;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        z-index: 1000;
+
+        width: 50%;
+        height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 30px 25px;
+
+        overflow: hidden;
+
+        background:
+            rgba(229, 227, 223, 0.98);
+
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+
+        box-shadow:
+            10px 0 50px rgba(30, 30, 28, 0.12);
+
+        transform:
+            translateX(-100%);
+
+        transition:
+            transform 0.45s var(--ease);
+    }
+
+    .nav-links.active {
+        transform:
+            translateX(0);
+    }
+
+    .close-menu {
+        display: block;
+
+        width: 100%;
+
+        margin-bottom: 40px;
+
+        text-align: left;
+    }
+
+    .nav-links li {
+        width: 100%;
+
+        margin-bottom: 25px;
+
+        list-style: none;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        color: var(--text-dark);
+
+        font-size: 14px;
+
+        text-align: left;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+
+        margin: 20px 0 25px;
+
+        font-size:
+            clamp(52px, 15vw, 76px);
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero p {
+        max-width: 100%;
+
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .hero-label {
+        font-size: 9px;
+        letter-spacing: 3.5px;
+    }
+
+    .main-button {
+        padding: 15px 25px;
+    }
+
+
+    /* ---------- CATEGORY ---------- */
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .category-card {
+        height: 430px;
+    }
+
+    .drive-card {
+        height: 280px;
+    }
+
+
+    /* ---------- GALLERY ---------- */
+
+   
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .gallery-item {
+        width: 88%;
+        max-width: 360px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+
+
+    .gallery-header {
+        gap: 20px;
+    }
+
+    .gallery-header h2 {
+        font-size: 46px;
+    }
+
+
+    /* ---------- VIDEO ---------- */
+
+    .video-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 18px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 94%;
+        max-width: 420px;
+
+        min-height: 390px;
+
+        margin: 0 auto;
+
+        padding: 35px 24px;
+    }
+
+    .haldi-service {
+        grid-column: auto;
+    }
+
+    .service-card h3 {
+        margin: 15px 0 12px;
+
+        font-size: 30px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .service-number {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-box {
+        padding: 60px 20px;
+    }
+
+    .contact-intro {
+        margin-bottom: 40px;
+    }
+
+    .contact-intro h2 {
+        font-size: 48px;
+    }
+
+    .contact-intro p {
+        font-size: 13px;
+    }
+
+    .inquiry-form {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 28px 20px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-submit {
+        grid-column: auto;
+    }
+
+    .form-submit .main-button {
+        width: 100%;
+    }
+
+
+    /* ---------- LIGHTBOX ---------- */
+
+    #lightboxContent img,
+    #lightboxContent video {
+        max-width: 90vw;
+        max-height: 75vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 45px;
+        height: 45px;
+
+        font-size: 27px;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 15px;
+
+        font-size: 35px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+
+    /* =====================================================
+       GALLERY MODE MOBILE
+    ===================================================== */
+
+    body.gallery-mode .gallery-section.active {
+
+        padding-top: 35px;
+        padding-bottom: 50px;
+
+        min-height: 100vh;
+    }
+
+
+    /* ---------- REMOVE HOVER MOVEMENT ---------- */
+
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .category-card {
+        height: 400px;
+    }
+
+    .gallery-item {
+        height: auto;
+    }
+
+    .service-card {
+        min-height: 370px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .gallery-header h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}
+/* =========================================================
+   LIGHTBOX ZOOM CONTROLS
+========================================================= */
+
+.zoom-controls {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    z-index: 10002;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    transform: translateX(-50%);
+
+    padding: 8px 12px;
+
+    background: rgba(20, 20, 20, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 30px;
+}
+
+.zoom-controls button {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.zoom-controls button:hover {
+    background: var(--gold-dark);
+    border-color: var(--gold-light);
+}
+
+#zoomLevel {
+    min-width: 48px;
+
+    color: var(--white);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LIGHTBOX ZOOMED CONTENT
+========================================================= */
+
+#lightboxContent img,
+#lightboxContent video {
+    transform-origin: center center;
+    transition: transform 0.25s ease;
+}
+
+
+/* =========================================================
+   MOBILE ZOOM CONTROLS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .zoom-controls {
+        bottom: 18px;
+        gap: 10px;
+        padding: 6px 9px;
+    }
+
+    .zoom-controls button {
+        width: 32px;
+        height: 32px;
+        font-size: 19px;
+    }
+
+    #zoomLevel {
+        font-size: 10px;
+    }
+}
